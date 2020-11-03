@@ -18,6 +18,7 @@ RUN chmod +x /init.sh \
         language-pack-en \
         less \
         man \
+        nano \
         python3 \
         python3-dev \
         python3-pip \
@@ -25,8 +26,14 @@ RUN chmod +x /init.sh \
         python3-wheel \
         tmux \
         vim \
+        wget \
+# Install micro (easy text editor for terminal)
+    && wget -q -O /tmp/micro.deb https://github.com/zyedidia/micro/releases/download/v2.0.8/micro-2.0.8-amd64.deb \
+    && dpkg -i /tmp/micro.deb \
+    && rm /tmp/micro.deb \
 # Install OpenStack tools via pip
     && pip3 install \
+        ansible==2.10.1 \
         python-openstackclient==5.2.0 \
 # Setup completion
     && openstack complete > /etc/bash_completion.d/osc.bash_completion \
