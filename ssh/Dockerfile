@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND=noninteractive \
-    TERRAFORM_VERSION=0.12.26
+    TERRAFORM_VERSION=0.12.29
 
 COPY init.sh /init.sh
 
