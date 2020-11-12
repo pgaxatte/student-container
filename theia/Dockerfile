@@ -12,7 +12,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     SHELL=/bin/bash \
     TERRAFORM012_VERSION=0.12.29 \
     TERRAFORM013_VERSION=0.13.5 \
-    THEIA_DEFAULT_PLUGINS=local-dir:/home/student/plugins \
+    THEIA_DEFAULT_PLUGINS=local-dir:/theia/plugins \
     YARN_VERSION=1.22.5
 
 # Common deps
@@ -118,10 +118,11 @@ RUN set -ex \
     && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz
 
 RUN chmod g+rw /home && \
-    mkdir -p /home/project && \
-    mkdir -p /home/student/.pub-cache/bin && \
-    chown -R student:student /home/project && \
-    chown -R student:student /home/student/.pub-cache/bin
+    mkdir -p /home/student && \
+    mkdir -p /theia && \
+    mkdir -p /theia/.pub-cache/bin && \
+    chown -R student:student /home/student && \
+    chown -R student:student /theia
 
 RUN apt-get clean && \
   apt-get autoremove -y && \
@@ -138,7 +139,7 @@ RUN curl -sfLo - "https://releases.hashicorp.com/terraform/${TERRAFORM012_VERSIO
     ln -s /usr/local/bin/terraform012 /usr/local/bin/terraform
 
 USER student
-WORKDIR /home/student
+WORKDIR /theia
 ADD $version.package.json ./package.json
 
 RUN yarn --pure-lockfile && \
@@ -154,4 +155,4 @@ RUN yarn --pure-lockfile && \
 
 EXPOSE 3000
 
-ENTRYPOINT [ "node", "/home/student/src-gen/backend/main.js", "/home/project", "--hostname=0.0.0.0" ]
+ENTRYPOINT [ "node", "/theia/src-gen/backend/main.js", "/home/student", "--hostname=0.0.0.0" ]
