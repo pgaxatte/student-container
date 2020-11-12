@@ -2,9 +2,6 @@ FROM ubuntu:18.04
 
 ARG NODE_VERSION=12.18.3
 
-# Use "latest" or "next" version for Theia packages
-ARG version=latest
-
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
@@ -140,7 +137,7 @@ RUN curl -sfLo - "https://releases.hashicorp.com/terraform/${TERRAFORM012_VERSIO
 
 USER student
 WORKDIR /theia
-ADD $version.package.json ./package.json
+ADD package.json ./package.json
 
 RUN yarn --pure-lockfile && \
     NODE_OPTIONS="--max_old_space_size=4096" yarn theia build && \
