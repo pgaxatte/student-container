@@ -1,4 +1,4 @@
-FROM ubuntu:20.04 as builder
+FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=C.UTF-8 \
@@ -32,7 +32,6 @@ RUN apt-get update && \
         python3-pip \
         python3-setuptools \
         python3-wheel \
-        sudo \
         tmux \
         unzip \
         vim \
@@ -61,6 +60,7 @@ RUN curl -sfLo - "https://releases.hashicorp.com/terraform/${TERRAFORM012_VERSIO
 
 WORKDIR /theia
 ADD package.json ./package.json
+ADD settings.json /home/student/.theia/settings.json
 
 RUN yarn --pure-lockfile && \
     NODE_OPTIONS="--max_old_space_size=4096" yarn theia build && \
@@ -74,9 +74,6 @@ RUN yarn --pure-lockfile && \
     yarn cache clean
 
 RUN adduser --disabled-password --gecos '' student && \
-    adduser student sudo && \
-    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
-    touch /home/student/.sudo_as_admin_successful && \
     mkdir -p /home/student && \
     chown -R student:student /home/student && \
     chown -R student:student /theia
