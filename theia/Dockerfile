@@ -3,6 +3,7 @@ FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
+    PACKER_VERSION=1.6.5 \
     TERRAFORM012_VERSION=0.12.29 \
     TERRAFORM013_VERSION=0.13.5 \
     THEIA_DEFAULT_PLUGINS=local-dir:/theia/plugins
@@ -56,7 +57,10 @@ RUN curl -sfLo - "https://releases.hashicorp.com/terraform/${TERRAFORM012_VERSIO
     curl -sfLo - "https://releases.hashicorp.com/terraform/${TERRAFORM013_VERSION}/terraform_${TERRAFORM013_VERSION}_linux_amd64.zip" | \
       gunzip -d - > /usr/local/bin/terraform013 && \
     chmod +x /usr/local/bin/terraform013 && \
-    ln -s /usr/local/bin/terraform012 /usr/local/bin/terraform
+    ln -s /usr/local/bin/terraform012 /usr/local/bin/terraform && \
+    curl -sfLo - "https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip" | \
+      gunzip -d - > /usr/local/bin/packer && \
+    chmod +x /usr/local/bin/packer
 
 WORKDIR /theia
 ADD package.json ./package.json
