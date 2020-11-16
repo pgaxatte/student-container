@@ -27,6 +27,7 @@ RUN apt-get update && \
         language-pack-en \
         less \
         man \
+        netcat-openbsd \
         nodejs \
         openssh-client \
         python3-dev \
