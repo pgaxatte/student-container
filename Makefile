@@ -7,4 +7,4 @@ ssh:
 	@cd ssh; docker build -t student:ssh .
 
 theia:
-	@cd ssh; docker build -t student:theia .
+	@cd theia; docker build -t student:theia .

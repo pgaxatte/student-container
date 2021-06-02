@@ -3,9 +3,8 @@ FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
-    PACKER_VERSION=1.6.5 \
-    TERRAFORM012_VERSION=0.12.29 \
-    TERRAFORM013_VERSION=0.13.5 \
+    PACKER_VERSION=1.7.2 \
+    TERRAFORM_VERSION=0.15.4 \
     THEIA_DEFAULT_PLUGINS=local-dir:/theia/plugins
 
 RUN apt-get update && \
@@ -40,6 +39,7 @@ RUN apt-get update && \
         wget \
         yarn \
     && \
+    pip3 install --upgrade pip setuptools && \
     pip3 install \
         ansible==2.10.1 \
         python-openstackclient==5.2.0 \
@@ -52,15 +52,11 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/*
 
-RUN curl -sfLo - "https://releases.hashicorp.com/terraform/${TERRAFORM012_VERSION}/terraform_${TERRAFORM012_VERSION}_linux_amd64.zip" | \
-      gunzip -d - > /usr/local/bin/terraform012 && \
-    chmod +x /usr/local/bin/terraform012 && \
-    curl -sfLo - "https://releases.hashicorp.com/terraform/${TERRAFORM013_VERSION}/terraform_${TERRAFORM013_VERSION}_linux_amd64.zip" | \
-      gunzip -d - > /usr/local/bin/terraform013 && \
-    chmod +x /usr/local/bin/terraform013 && \
-    ln -s /usr/local/bin/terraform012 /usr/local/bin/terraform && \
+RUN curl -sfLo - "https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip" | \
+        gunzip -d - > /usr/local/bin/terraform && \
+    chmod +x /usr/local/bin/terraform && \
     curl -sfLo - "https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip" | \
-      gunzip -d - > /usr/local/bin/packer && \
+        gunzip -d - > /usr/local/bin/packer && \
     chmod +x /usr/local/bin/packer
 
 WORKDIR /theia
