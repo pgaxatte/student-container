@@ -3,8 +3,8 @@ FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
-    PACKER_VERSION=1.7.2 \
-    TERRAFORM_VERSION=0.15.4 \
+    PACKER_VERSION=1.7.8 \
+    TERRAFORM_VERSION=0.15.5 \
     THEIA_DEFAULT_PLUGINS=local-dir:/theia/plugins
 
 RUN apt-get update && \
@@ -25,10 +25,12 @@ RUN apt-get update && \
         jq \
         language-pack-en \
         less \
+        libsecret-1-dev \
         man \
         netcat-openbsd \
         nodejs \
         openssh-client \
+        pkg-config \
         python3-dev \
         python3-pip \
         python3-setuptools \
