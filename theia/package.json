@@ -54,6 +54,6 @@
         "vscode-builtin-theme-tomorrow-night-blue": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-tomorrow-night-blue-1.39.1-prel.vsix",
         "vscode-builtin-icon-theme-seti": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/vscode-theme-seti-1.39.1-prel.vsix",
         "vscode-builtin-yaml": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/yaml-1.39.1-prel.vsix",
-        "vscode-terraform": "https://github.com/hashicorp/vscode-terraform/releases/download/v2.11.0/terraform-2.14.0.vsix"
+        "vscode-terraform": "https://github.com/hashicorp/vscode-terraform/releases/download/v2.14.0/terraform-2.14.0.vsix"
     }
 }
