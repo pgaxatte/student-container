@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     PACKER_VERSION=1.7.8 \
-    TERRAFORM_VERSION=0.15.5 \
+    TERRAFORM_VERSION=1.1.2 \
     THEIA_DEFAULT_PLUGINS=local-dir:/theia/plugins
 
 RUN apt-get update && \
