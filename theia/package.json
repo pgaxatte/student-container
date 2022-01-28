@@ -3,7 +3,7 @@
     "theia": {
         "frontend": {
             "config": {
-                "applicationName": "Theia Multi-Language Example",
+                "applicationName": "Cloud Workshops IDE",
                 "preferences": {
                     "files.enableTrash": false
                 }
@@ -11,29 +11,29 @@
         }
     },
     "dependencies": {
-        "@theia/callhierarchy": "latest",
-        "@theia/editor": "latest",
-        "@theia/editor-preview": "latest",
-        "@theia/file-search": "latest",
-        "@theia/getting-started": "latest",
-        "@theia/git": "latest",
-        "@theia/markers": "latest",
-        "@theia/messages": "latest",
-        "@theia/mini-browser": "latest",
-        "@theia/monaco": "latest",
-        "@theia/navigator": "latest",
-        "@theia/outline-view": "latest",
-        "@theia/plugin": "latest",
-        "@theia/plugin-ext": "latest",
-        "@theia/plugin-ext-vscode": "latest",
-        "@theia/preferences": "latest",
-        "@theia/preview": "latest",
-        "@theia/terminal": "latest",
-        "@theia/userstorage": "latest",
-        "@theia/vsx-registry": "latest"
+        "@theia/callhierarchy": "1.22.0",
+        "@theia/editor": "1.22.0",
+        "@theia/editor-preview": "1.22.0",
+        "@theia/file-search": "1.22.0",
+        "@theia/getting-started": "1.22.0",
+        "@theia/git": "1.22.0",
+        "@theia/markers": "1.22.0",
+        "@theia/messages": "1.22.0",
+        "@theia/mini-browser": "1.22.0",
+        "@theia/monaco": "1.22.0",
+        "@theia/navigator": "1.22.0",
+        "@theia/outline-view": "1.22.0",
+        "@theia/plugin": "1.22.0",
+        "@theia/plugin-ext": "1.22.0",
+        "@theia/plugin-ext-vscode": "1.22.0",
+        "@theia/preferences": "1.22.0",
+        "@theia/preview": "1.22.0",
+        "@theia/terminal": "1.22.0",
+        "@theia/userstorage": "1.22.0",
+        "@theia/vsx-registry": "1.22.0"
     },
     "devDependencies": {
-        "@theia/cli": "latest"
+        "@theia/cli": "1.21.0"
     },
     "theiaPluginsDir": "plugins",
     "theiaPlugins": {
@@ -43,15 +43,8 @@
         "vscode-builtin-json-language-features": "https://open-vsx.org/api/vscode/json-language-features/1.46.1/file/vscode.json-language-features-1.46.1.vsix",
         "vscode-builtin-make": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/make-1.39.1-prel.vsix",
         "vscode-builtin-python": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/python-1.39.1-prel.vsix",
-        "vscode-builtin-theme-abyss": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-abyss-1.39.1-prel.vsix",
         "vscode-builtin-theme-defaults": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-defaults-1.39.1-prel.vsix",
-        "vscode-builtin-theme-kimbie-dark": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-kimbie-dark-1.39.1-prel.vsix",
-        "vscode-builtin-theme-monokai": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-monokai-1.39.1-prel.vsix",
-        "vscode-builtin-theme-dimmed": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-monokai-dimmed-1.39.1-prel.vsix",
-        "vscode-builtin-theme-quietlight": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-quietlight-1.39.1-prel.vsix",
-        "vscode-builtin-theme-red": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-red-1.39.1-prel.vsix",
         "vscode-builtin-theme-solarized-dark": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-solarized-dark-1.39.1-prel.vsix",
-        "vscode-builtin-theme-tomorrow-night-blue": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-tomorrow-night-blue-1.39.1-prel.vsix",
         "vscode-builtin-icon-theme-seti": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/vscode-theme-seti-1.39.1-prel.vsix",
         "vscode-builtin-yaml": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/yaml-1.39.1-prel.vsix",
         "vscode-terraform": "https://github.com/hashicorp/vscode-terraform/releases/download/v2.14.0/terraform-2.14.0.vsix"
