@@ -11,16 +11,12 @@
         }
     },
     "dependencies": {
-        "@theia/callhierarchy": "1.22.0",
         "@theia/editor": "1.22.0",
-        "@theia/editor-preview": "1.22.0",
         "@theia/file-search": "1.22.0",
-        "@theia/getting-started": "1.22.0",
         "@theia/git": "1.22.0",
         "@theia/markers": "1.22.0",
         "@theia/messages": "1.22.0",
         "@theia/mini-browser": "1.22.0",
-        "@theia/monaco": "1.22.0",
         "@theia/navigator": "1.22.0",
         "@theia/outline-view": "1.22.0",
         "@theia/plugin": "1.22.0",
@@ -47,6 +43,6 @@
         "vscode-builtin-theme-solarized-dark": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/theme-solarized-dark-1.39.1-prel.vsix",
         "vscode-builtin-icon-theme-seti": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/vscode-theme-seti-1.39.1-prel.vsix",
         "vscode-builtin-yaml": "https://github.com/theia-ide/vscode-builtin-extensions/releases/download/v1.39.1-prel/yaml-1.39.1-prel.vsix",
-        "vscode-terraform": "https://github.com/hashicorp/vscode-terraform/releases/download/v2.14.0/terraform-2.14.0.vsix"
+        "vscode-terraform": "https://open-vsx.org/api/hashicorp/terraform/2.18.0/file/hashicorp.terraform-2.18.0.vsix"
     }
 }
