@@ -1,10 +1,4 @@
-.PHONY: all ssh theia
-.DEFAULT: all
+code:
+	@cd code-server; docker build -t student:code .
 
-all: ssh theia
-
-ssh:
-	@cd ssh; docker build -t student:ssh .
-
-theia:
-	@cd theia; docker build -t student:theia .
+.PHONY: code
