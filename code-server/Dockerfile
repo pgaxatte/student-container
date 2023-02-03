@@ -17,6 +17,7 @@ RUN apt-get update \
         lsb-release \
         man \
         nano \
+        netcat \
         procps \
         python3 \
         python3-pip \
